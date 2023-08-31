@@ -1,0 +1,22 @@
+version: "3.8"  # Use the appropriate version of Docker Compose
+
+services:
+  django:
+    build: .
+    ports:
+      - "8000:8000"  # Map port 8000 inside the container to port 8000 on the host
+    environment:
+      - DJANGO_SETTINGS_MODULE=backend.settings  # Replace 'backend' with your Django project name
+      - POSTGRES_DB=notesapp
+      - POSTGRES_USER=ki3ani
+      - POSTGRES_PASSWORD=omniman2023
+      - POSTGRES_HOST=db  # This should match the service name defined below
+    depends_on:
+      - db
+
+  db:
+    image: postgres:latest
+    environment:
+      - POSTGRES_DB=notesapp
+      - POSTGRES_USER=ki3ani
+      - POSTGRES_PASSWORD=omniman2023
