@@ -2,9 +2,7 @@
 
 Welcome to the API documentation for My Notes App. This document provides detailed information about the available API endpoints, authentication, request and response formats, and error handling.
 
-## Base URL
 
-All API endpoints are relative to the base URL of your backend server. The base URL for the My Notes App API is `https://api.my-notes-app.com`.
 
 ## Authentication
 
